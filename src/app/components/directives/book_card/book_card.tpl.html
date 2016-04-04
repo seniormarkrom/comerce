@@ -1,0 +1,15 @@
+<div class="book-card">
+    <div class="image-container">
+        <img ng-src="{{vm.book.cover}}" class="md-card-image" alt="">
+    </div>
+    <md-card-content>
+        <h3 class="md-title text-center text-overflow-ellipsis" title="{{vm.book.title}}">{{vm.book.title}}</h3>
+        <p class="text-center">{{vm.book.price}} €</p>
+    </md-card-content>
+
+    <div class="md-actions" layout="row" layout-align="center">
+        <md-button class="md-raised md-warn" aria-label="Add to shoping cart" ng-click="vm.addToShoppingCart(vm.book)">
+            <i class="fa fa-cart-plus"></i> Add to your shopping car
+        </md-button>
+    </div>
+</div>

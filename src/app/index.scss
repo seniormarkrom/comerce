@@ -1,0 +1,124 @@
+/**
+ *  Do not remove this comments bellow. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+@import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:400,700,700italic,400italic);
+
+html {
+  font-family: Lato,"Lato Latin","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+$default-white-color: white;
+$default-gray-color: #efefef;
+$default-dark-grey: #878787;
+$default-black-color: black;
+$default-blue-color: #5aadbb;
+$default-red-color: #eb0028;
+$font-size: 16px;
+
+body{
+  color: rgba(65, 47, 47, 0.87);
+}
+
+[layout=row] {
+  flex-direction: row;
+}
+
+md-content{
+  background-color: $default-gray-color;
+}
+
+h1{
+  margin: 50px 0;
+  font-size: 3*$font-size;
+  font-weight: normal;
+}
+
+h3{
+  margin: 5px 0;
+  font-size: 1.1*$font-size;
+}
+
+.browsehappy {
+  margin: 10px 0;
+  background: $default-gray-color;
+  color: $default-black-color;
+  padding: 0.2em 0;
+}
+
+.main-container{
+  padding: 64px 15px 0;
+}
+
+section.jumbotron {
+  margin: 30px 0;
+  padding: 1px 30px;
+  background-color: $default-blue-color;
+  color: $default-white-color;
+}
+
+.techs {
+
+  md-card {
+    padding: 10px;
+
+    img.pull-right {
+      float: right;
+      width: 50px;
+    }
+  }
+}
+
+#toast-container.toast-bottom-center{
+  div{
+    width: 500px;
+    background-color: $default-black-color;
+  }
+}
+
+// Global css
+.text-center{
+  text-align: center;
+}
+.font-weight-100{
+  font-weight: 100;
+}
+.font-bold{
+  font-weight: bold;
+}
+.capitalize{
+  text-transform: capitalize;
+}
+.uppercase{
+  text-transform: uppercase;
+}
+.line-through{
+  text-decoration: line-through;
+}
+.no-margin{
+  margin: 0;
+}
+.no-padding{
+  padding: 0;
+}
+.vertical-middle{
+  vertical-align: middle;
+}
+.margin-5{
+  margin: 5px 0;
+}
+.text-overflow-ellipsis{
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/**
+ *  Do not remove this comments bellow. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

@@ -1,0 +1,11 @@
+<div class="store">
+
+    <h1>Bests sellers</h1>
+    <div class="books" layout="row" layout-align="left" layout-wrap>
+        <md-card ng-repeat="book in store.books | orderBy: $index" class="no-margin"
+                 layout="column" layout-align="space-between" flex="25" flex-md="33">
+            <book-card book="book"></book-card>
+        </md-card>
+    </div>
+
+</div>

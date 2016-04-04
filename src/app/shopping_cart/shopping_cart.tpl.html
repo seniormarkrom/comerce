@@ -1,0 +1,58 @@
+<div class="shopping-cart" layout="row">
+    <md-content ng-if="cart.myCart.length > 0">
+
+        <h1>What are you buying?</h1>
+
+        <table class="cart">
+            <thead>
+            <tr>
+                <td class="article">Article</td>
+                <td class="name"></td>
+                <td class="price">Price</td>
+                <td class="quantity">Number of items</td>
+                <td class="subtotal">Sub-Total</td>
+                <td class="tools"></td>
+            </tr>
+            </thead>
+
+            <tbody>
+            <tr class="cart-item" ng-repeat="item in cart.myCart">
+                <td class="article"><img ng-src="{{item.cover}}" class="face" alt=""></td>
+                <td class="name text-left">{{item.title}}</td>
+                <td class="price">{{item.price | currency: ''}}$</td>
+                <td class="quantity">
+                    <button class="btn fa fa-minus" aria-label="Supprimer" ng-click="cart.removeFromShoppingCart(item)"></button>
+                    {{item.quantity}}
+                    <button class="btn fa fa-plus" aria-label="Add" ng-click="cart.addToShoppingCart(item)"></button>
+                </td>
+                <td class="subtotal">{{item.price* item.quantity | currency: ''}}$</td>
+                <td class="tools">
+                    <md-button class="md-flat md-warn" aria-label="Supprimer" ng-click="cart.completelyRemoveFromShoppingCart(item)">
+                        <i class="fa fa-trash-o"></i>
+                    </md-button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="cart-summary" layout="column" layout-align="start end">
+            <p>Total</p>
+            <p class="full-price line-through">{{cart.fullPrice | currency:''}}$</p>
+
+            <p ng-show="cart.bestOffer.type === 'percentage'">Offert {{cart.bestOffer.value}}%</p>
+            <p ng-show="cart.bestOffer.type === 'minus'">Final price</p>
+            <p ng-show="cart.bestOffer.type === 'slice'">
+                Offert {{cart.bestOffer.value | currency: ''}}$€ because {{cart.bestOffer.sliceValue | currency: ''}}$ d'achats
+            </p>
+
+            <div class="discount">-{{cart.bestOffer.calculatedDiscount| currency : ''}}$</div>
+            <h2 class="final-price font-weight-100">Final Price: <span>{{cart.finalPrice | currency:''}}$</span></h2>
+        </div>
+    </md-content>
+
+    <md-content ng-if="cart.myCart.length === 0" class="empty-cart">
+        <h1><i class="fa fa-shopping-cart"></i> Empty shopping cart.</h1>
+        <h2>PPlease select one or more articles.</h2>
+    </md-content>
+
+</div>

@@ -1,0 +1,19 @@
+@import 'index';
+
+.book-card{
+  margin: 15px;
+
+  .image-container {
+    margin: 20%;
+  }
+
+  .md-button{
+    font-size: 0.8*$font-size;
+
+    i {
+      font-size: 1.5*$font-size;
+    }
+  }
+
+
+}

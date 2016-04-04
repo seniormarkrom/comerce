@@ -1,0 +1,24 @@
+bookstore-navbar {
+
+  md-toolbar.md-default-theme {
+    background-color: white;
+    color: grey;
+    position: fixed;
+
+    .md-toolbar-tools{
+      img {
+        width: 50px;
+      }
+    }
+
+    i{
+      font-size: 1.3em;
+    }
+
+    .cart-size{
+      color: rgb(244,67,54);
+      font-weight: bold;
+    }
+
+  }
+}
